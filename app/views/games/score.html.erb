@@ -1,0 +1,10 @@
+<h1 class=container>Game Score</h1>
+
+<p class=container><%= raw @result_message %></p>
+
+<p class=container id="score">Your current score: <%= session[:score] %></p>
+<% if session[:last_word_score] %>
+<p class=container id="score">Score for the last word: <%= session[:last_word_score] %></p>
+<% end %>
+
+<%= link_to "Play Again", new_path %>
